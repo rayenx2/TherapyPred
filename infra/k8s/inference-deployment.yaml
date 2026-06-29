@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: inference-api
+  namespace: mlops
+  labels:
+    app: inference-api
+    app.kubernetes.io/part-of: clinical-prediction
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: inference-api
+  template:
+    metadata:
+      labels:
+        app: inference-api
+    spec:
+      containers:
+        - name: inference-api
+          image: mlops-inference-api:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8000
+              protocol: TCP
+          env:
+            - name: MODEL_PATH
+              value: "models/model.joblib"
+            - name: PREPROCESSOR_PATH
+              value: "data/processed/preprocessor.joblib"
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "256Mi"
+            limits:
+              cpu: "500m"
+              memory: "512Mi"
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 15
+            periodSeconds: 30
+            timeoutSeconds: 5
+            failureThreshold: 3
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 3
+      restartPolicy: Always

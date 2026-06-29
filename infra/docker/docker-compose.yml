@@ -1,0 +1,83 @@
+
+services:
+  # --- Inference API ---
+  inference-api:
+    build:
+      context: ../..
+      dockerfile: infra/docker/Dockerfile.inference
+    container_name: mlops-inference-api
+    ports:
+      - "8100:8000"
+    environment:
+      - MODEL_PATH=models/model.joblib
+      - PREPROCESSOR_PATH=data/processed/preprocessor.joblib
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    restart: unless-stopped
+    networks:
+      - mlops-network
+
+  # --- Frontend ---
+  frontend:
+    build:
+      context: ../..
+      dockerfile: infra/docker/Dockerfile.frontend
+    container_name: mlops-frontend
+    ports:
+      - "8101:8080"
+    environment:
+      - REACT_APP_API_URL=http://inference-api:8000
+    depends_on:
+      - inference-api
+    restart: unless-stopped
+    networks:
+      - mlops-network
+
+  # --- Prometheus ---
+  prometheus:
+    image: prom/prometheus:v2.49.1
+    container_name: mlops-prometheus
+    ports:
+      - "9191:9090"
+    volumes:
+      - ../../monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus-data:/prometheus
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.retention.time=7d"
+    depends_on:
+      - inference-api
+    restart: unless-stopped
+    networks:
+      - mlops-network
+
+  # --- Grafana ---
+  grafana:
+    image: grafana/grafana:10.3.1
+    container_name: mlops-grafana
+    ports:
+      - "3100:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_ADMIN_PASSWORD:-changeme}
+      - GF_USERS_ALLOW_SIGN_UP=false
+    volumes:
+      - ../../monitoring/grafana/dashboards:/var/lib/grafana/dashboards:ro
+      - ../../monitoring/grafana/provisioning:/etc/grafana/provisioning:ro
+      - grafana-data:/var/lib/grafana
+    depends_on:
+      - prometheus
+    restart: unless-stopped
+    networks:
+      - mlops-network
+
+volumes:
+  prometheus-data:
+  grafana-data:
+
+networks:
+  mlops-network:
+    driver: bridge

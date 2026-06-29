@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinical Treatment Outcome Prediction</title>
+    <meta name="description"
+        content="ML-powered prediction system for clinical treatment outcome scores. Supports research, quality analysis, and exploratory analytics.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <circle cx="16" cy="16" r="14" stroke="#6366f1" stroke-width="2.5" fill="none" />
+                        <path d="M10 16h4l2-6 4 12 2-6h4" stroke="#6366f1" stroke-width="2" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <h1>Treatment Outcome Prediction</h1>
+                </div>
+                <span class="badge">MLOps v1.0</span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Disclaimer Banner -->
+            <div class="disclaimer-banner">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="12" y1="8" x2="12" y2="12" />
+                    <line x1="12" y1="16" x2="12.01" y2="16" />
+                </svg>
+                <p>This system predicts patient treatment outcome scores to support clinical research, quality analysis,
+                    and exploratory analytics. It does <strong>not</strong> provide diagnostic or treatment
+                    recommendations.</p>
+            </div>
+
+            <div class="content-grid">
+                <!-- Input Form -->
+                <section class="card form-card">
+                    <div class="card-header">
+                        <h2>Patient Information</h2>
+                        <p class="card-subtitle">Enter treatment details for prediction</p>
+                    </div>
+
+                    <form id="prediction-form">
+                        <div class="form-grid">
+                            <!-- Patient ID -->
+                            <div class="form-group full-width">
+                                <label for="patient-id">Patient ID</label>
+                                <input type="text" id="patient-id" placeholder="e.g. P0001" required>
+                            </div>
+
+                            <!-- Age -->
+                            <div class="form-group">
+                                <label for="age">Age</label>
+                                <input type="number" id="age" min="18" max="79" placeholder="18-79" required>
+                            </div>
+
+                            <!-- Gender -->
+                            <div class="form-group">
+                                <label for="gender">Gender</label>
+                                <select id="gender" required>
+                                    <option value="" disabled selected>Select</option>
+                                </select>
+                            </div>
+
+                            <!-- Condition -->
+                            <div class="form-group">
+                                <label for="condition">Condition</label>
+                                <select id="condition" required>
+                                    <option value="" disabled selected>Select</option>
+                                </select>
+                            </div>
+
+                            <!-- Drug Name -->
+                            <div class="form-group">
+                                <label for="drug-name">Drug Name</label>
+                                <select id="drug-name" required>
+                                    <option value="" disabled selected>Select</option>
+                                </select>
+                            </div>
+
+                            <!-- Dosage -->
+                            <div class="form-group">
+                                <label for="dosage">Dosage (mg)</label>
+                                <select id="dosage" required>
+                                    <option value="" disabled selected>Select</option>
+                                </select>
+                            </div>
+
+                            <!-- Treatment Duration -->
+                            <div class="form-group">
+                                <label for="duration">Treatment Duration (days)</label>
+                                <input type="number" id="duration" min="5" max="59" placeholder="5-59" required>
+                            </div>
+
+                            <!-- Side Effects -->
+                            <div class="form-group full-width">
+                                <label for="side-effects">Side Effects</label>
+                                <select id="side-effects" required>
+                                    <option value="" disabled selected>Select reported side effect</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Validation Error Toast -->
+                        <div id="validation-toast" class="validation-toast" style="display: none;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="12"></line>
+                                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                            <span id="validation-message">Invalid combination selected.</span>
+                        </div>
+
+                        <button type="submit" class="submit-btn" id="submit-btn">
+                            <span class="btn-text">Predict Outcome</span>
+                            <span class="btn-loader" id="btn-loader"></span>
+                        </button>
+                    </form>
+                </section>
+
+                <!-- Result Display -->
+                <section class="card result-card" id="result-card">
+                    <div class="card-header">
+                        <h2>Prediction Result</h2>
+                        <p class="card-subtitle">Treatment improvement score</p>
+                    </div>
+
+                    <!-- Empty State -->
+                    <div class="empty-state" id="empty-state">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                            <circle cx="32" cy="32" r="28" stroke="#334155" stroke-width="2" stroke-dasharray="4 4" />
+                            <path d="M24 32h16M32 24v16" stroke="#475569" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        <p>Fill in the form and click <strong>Predict Outcome</strong> to see the result</p>
+                    </div>
+
+                    <!-- Result Content -->
+                    <div class="result-content" id="result-content" style="display:none;">
+                        <!-- Patient ID Badge -->
+                        <div class="patient-badge" id="patient-badge">
+                            <span class="patient-label">Patient</span>
+                            <span class="patient-id" id="result-patient-id">—</span>
+                        </div>
+
+                        <!-- Animated Circle -->
+                        <div class="score-circle-container">
+                            <svg class="score-circle" viewBox="0 0 200 200">
+                                <circle cx="100" cy="100" r="85" class="circle-bg" />
+                                <circle cx="100" cy="100" r="85" class="circle-progress" id="circle-progress"
+                                    stroke-dasharray="534.07" stroke-dashoffset="534.07" />
+                            </svg>
+                            <div class="score-value">
+                                <span class="score-number" id="score-number">0.0</span>
+                                <span class="score-label">/ 10</span>
+                            </div>
+                        </div>
+
+                        <!-- Score Interpretation -->
+                        <div class="score-interpretation" id="score-interpretation">
+                            <span class="interpretation-dot" id="interpretation-dot"></span>
+                            <span class="interpretation-text" id="interpretation-text">—</span>
+                        </div>
+
+                        <!-- Model Info -->
+                        <div class="model-info">
+                            <div class="info-item">
+                                <span class="info-label">Model Version</span>
+                                <span class="info-value" id="model-version">—</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Error State -->
+                    <div class="error-state" id="error-state" style="display:none;">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <circle cx="24" cy="24" r="20" stroke="#ef4444" stroke-width="2" />
+                            <path d="M16 16l16 16M32 16L16 32" stroke="#ef4444" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                        <p class="error-message" id="error-message">An error occurred</p>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 Clinical Treatment Outcome Prediction. For research use only</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

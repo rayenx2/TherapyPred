@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="560" viewBox="0 0 760 560" font-family="Inter, Arial, sans-serif">
+  <rect width="760" height="560" fill="#0a0f1a"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3b82f6"/>
+    </marker>
+  </defs>
+
+  <rect x="200" y="16" width="360" height="50" rx="8" fill="rgba(15,23,42,0.7)" stroke="rgba(51,65,85,0.5)" stroke-width="1.5"/>
+  <text x="380" y="46" text-anchor="middle" fill="#e2e8f0" font-size="13" font-weight="700">CSV Dataset (1,000 patient records)</text>
+  <line x1="380" y1="66" x2="380" y2="98" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="150" y="98" width="460" height="54" rx="8" fill="rgba(15,23,42,0.7)" stroke="rgba(16,185,129,0.4)" stroke-width="1.5"/>
+  <text x="170" y="120" fill="#10b981" font-size="12" font-weight="700">DVC Pipeline</text>
+  <text x="170" y="140" fill="#94a3b8" font-size="11">ingest -&gt; preprocess -&gt; train -&gt; evaluate</text>
+  <line x1="380" y1="152" x2="380" y2="184" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="200" y="184" width="360" height="54" rx="8" fill="rgba(15,23,42,0.7)" stroke="rgba(51,65,85,0.5)" stroke-width="1.5"/>
+  <text x="380" y="206" text-anchor="middle" fill="#60a5fa" font-size="12" font-weight="700">RandomForestRegressor</text>
+  <text x="380" y="224" text-anchor="middle" fill="#94a3b8" font-size="11">model.joblib</text>
+  <line x1="380" y1="238" x2="380" y2="270" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="150" y="270" width="460" height="54" rx="8" fill="rgba(15,23,42,0.7)" stroke="rgba(16,185,129,0.4)" stroke-width="1.5"/>
+  <text x="170" y="292" fill="#10b981" font-size="12" font-weight="700">FastAPI Inference API</text>
+  <text x="170" y="310" fill="#94a3b8" font-size="11">/predict  /health  /metrics</text>
+
+  <line x1="290" y1="324" x2="230" y2="360" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="470" y1="324" x2="530" y2="360" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="70" y="360" width="320" height="54" rx="8" fill="rgba(15,23,42,0.7)" stroke="rgba(139,92,246,0.4)" stroke-width="1.5"/>
+  <text x="90" y="382" fill="#8b5cf6" font-size="12" font-weight="700">nginx Reverse Proxy</text>
+  <text x="90" y="400" fill="#94a3b8" font-size="11">React dashboard</text>
+
+  <rect x="410" y="360" width="280" height="54" rx="8" fill="rgba(15,23,42,0.7)" stroke="rgba(139,92,246,0.4)" stroke-width="1.5"/>
+  <text x="430" y="382" fill="#8b5cf6" font-size="12" font-weight="700">Prometheus</text>
+  <text x="430" y="400" fill="#94a3b8" font-size="11">metrics scrape every 15s</text>
+
+  <line x1="550" y1="414" x2="550" y2="446" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="410" y="446" width="280" height="54" rx="8" fill="rgba(15,23,42,0.7)" stroke="rgba(51,65,85,0.5)" stroke-width="1.5"/>
+  <text x="430" y="468" fill="#e2e8f0" font-size="12" font-weight="700">Grafana</text>
+  <text x="430" y="486" fill="#94a3b8" font-size="11">TherapyPred API Dashboard</text>
+</svg>

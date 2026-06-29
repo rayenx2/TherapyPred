@@ -1,0 +1,287 @@
+{
+    "annotations": {
+        "list": []
+    },
+    "editable": true,
+    "fiscalYearStartMonth": 0,
+    "graphTooltip": 1,
+    "id": null,
+    "links": [],
+    "panels": [
+        {
+            "title": "API Request Rate",
+            "type": "timeseries",
+            "gridPos": {
+                "h": 8,
+                "w": 12,
+                "x": 0,
+                "y": 0
+            },
+            "datasource": {
+                "type": "prometheus",
+                "uid": "prometheus"
+            },
+            "targets": [
+                {
+                    "expr": "rate(api_request_total[5m])",
+                    "legendFormat": "{{method}} {{endpoint}} {{status}}"
+                }
+            ],
+            "fieldConfig": {
+                "defaults": {
+                    "unit": "reqps",
+                    "custom": {
+                        "lineWidth": 2,
+                        "fillOpacity": 15,
+                        "gradientMode": "scheme"
+                    }
+                }
+            }
+        },
+        {
+            "title": "Request Latency (p50 / p95 / p99)",
+            "type": "timeseries",
+            "gridPos": {
+                "h": 8,
+                "w": 12,
+                "x": 12,
+                "y": 0
+            },
+            "datasource": {
+                "type": "prometheus",
+                "uid": "prometheus"
+            },
+            "targets": [
+                {
+                    "expr": "histogram_quantile(0.50, rate(api_request_duration_seconds_bucket[5m]))",
+                    "legendFormat": "p50"
+                },
+                {
+                    "expr": "histogram_quantile(0.95, rate(api_request_duration_seconds_bucket[5m]))",
+                    "legendFormat": "p95"
+                },
+                {
+                    "expr": "histogram_quantile(0.99, rate(api_request_duration_seconds_bucket[5m]))",
+                    "legendFormat": "p99"
+                }
+            ],
+            "fieldConfig": {
+                "defaults": {
+                    "unit": "s",
+                    "custom": {
+                        "lineWidth": 2,
+                        "fillOpacity": 10
+                    }
+                }
+            }
+        },
+        {
+            "title": "Total Predictions",
+            "type": "stat",
+            "gridPos": {
+                "h": 4,
+                "w": 6,
+                "x": 0,
+                "y": 8
+            },
+            "datasource": {
+                "type": "prometheus",
+                "uid": "prometheus"
+            },
+            "targets": [
+                {
+                    "expr": "api_prediction_total",
+                    "legendFormat": "predictions"
+                }
+            ],
+            "fieldConfig": {
+                "defaults": {
+                    "color": {
+                        "mode": "thresholds"
+                    },
+                    "thresholds": {
+                        "steps": [
+                            {
+                                "color": "#6366f1",
+                                "value": null
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "title": "Prediction Errors",
+            "type": "stat",
+            "gridPos": {
+                "h": 4,
+                "w": 6,
+                "x": 6,
+                "y": 8
+            },
+            "datasource": {
+                "type": "prometheus",
+                "uid": "prometheus"
+            },
+            "targets": [
+                {
+                    "expr": "api_prediction_errors_total",
+                    "legendFormat": "errors"
+                }
+            ],
+            "fieldConfig": {
+                "defaults": {
+                    "color": {
+                        "mode": "thresholds"
+                    },
+                    "thresholds": {
+                        "steps": [
+                            {
+                                "color": "green",
+                                "value": null
+                            },
+                            {
+                                "color": "red",
+                                "value": 1
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "title": "Error Rate",
+            "type": "timeseries",
+            "gridPos": {
+                "h": 4,
+                "w": 12,
+                "x": 12,
+                "y": 8
+            },
+            "datasource": {
+                "type": "prometheus",
+                "uid": "prometheus"
+            },
+            "targets": [
+                {
+                    "expr": "rate(api_prediction_errors_total[5m])",
+                    "legendFormat": "errors/s"
+                }
+            ],
+            "fieldConfig": {
+                "defaults": {
+                    "unit": "short",
+                    "color": {
+                        "mode": "fixed",
+                        "fixedColor": "red"
+                    },
+                    "custom": {
+                        "lineWidth": 2,
+                        "fillOpacity": 20
+                    }
+                }
+            }
+        },
+        {
+            "title": "API Health Status",
+            "type": "stat",
+            "gridPos": {
+                "h": 4,
+                "w": 6,
+                "x": 0,
+                "y": 12
+            },
+            "datasource": {
+                "type": "prometheus",
+                "uid": "prometheus"
+            },
+            "targets": [
+                {
+                    "expr": "up{job=\"inference-api\"}",
+                    "legendFormat": "API"
+                }
+            ],
+            "fieldConfig": {
+                "defaults": {
+                    "mappings": [
+                        {
+                            "options": {
+                                "0": {
+                                    "text": "DOWN",
+                                    "color": "red"
+                                },
+                                "1": {
+                                    "text": "UP",
+                                    "color": "green"
+                                }
+                            },
+                            "type": "value"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "title": "Model Version",
+            "type": "stat",
+            "gridPos": {
+                "h": 4,
+                "w": 6,
+                "x": 6,
+                "y": 12
+            },
+            "datasource": {
+                "type": "prometheus",
+                "uid": "prometheus"
+            },
+            "targets": [
+                {
+                    "expr": "model_info",
+                    "legendFormat": "{{version}}"
+                }
+            ]
+        },
+        {
+            "title": "Request Volume (24h)",
+            "type": "bargauge",
+            "gridPos": {
+                "h": 4,
+                "w": 12,
+                "x": 12,
+                "y": 12
+            },
+            "datasource": {
+                "type": "prometheus",
+                "uid": "prometheus"
+            },
+            "targets": [
+                {
+                    "expr": "increase(api_request_total[24h])",
+                    "legendFormat": "{{endpoint}}"
+                }
+            ],
+            "fieldConfig": {
+                "defaults": {
+                    "unit": "short"
+                }
+            }
+        }
+    ],
+    "schemaVersion": 39,
+    "tags": [
+        "mlops",
+        "clinical-prediction"
+    ],
+    "templating": {
+        "list": []
+    },
+    "time": {
+        "from": "now-1h",
+        "to": "now"
+    },
+    "timepicker": {},
+    "timezone": "browser",
+    "title": "TherapyPred API Dashboard",
+    "uid": "therapypred-api",
+    "version": 1
+}

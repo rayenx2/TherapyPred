@@ -1,0 +1,86 @@
+stages:
+  ingest:
+    cmd: python pipelines/ingest.py
+    deps:
+      - pipelines/ingest.py
+      - data/raw/real_drug_dataset.csv
+    outs:
+      - data/processed/ingested.csv:
+          cache: false
+    params:
+      - data.raw_path
+      - data.processed_dir
+
+  extract_combinations:
+    cmd: python pipelines/extract_combinations.py
+    deps:
+      - pipelines/extract_combinations.py
+      - data/raw/real_drug_dataset.csv
+    outs:
+      - data/processed/valid_combinations.json:
+          cache: false
+
+  validate:
+    cmd: python pipelines/validate.py
+    deps:
+      - pipelines/validate.py
+      - data/processed/ingested.csv
+    outs:
+      - data/processed/validated.csv:
+          cache: false
+    params:
+      - schema
+      - data.processed_dir
+
+  preprocess:
+    cmd: python pipelines/preprocess.py
+    deps:
+      - pipelines/preprocess.py
+      - data/processed/validated.csv
+    outs:
+      - data/processed/X_train.csv:
+          cache: false
+      - data/processed/X_test.csv:
+          cache: false
+      - data/processed/y_train.csv:
+          cache: false
+      - data/processed/y_test.csv:
+          cache: false
+      - data/processed/preprocessor.joblib:
+          cache: false
+    params:
+      - random_seed
+      - test_split
+      - features
+      - data.processed_dir
+
+  train:
+    cmd: python training/train.py
+    deps:
+      - training/train.py
+      - data/processed/X_train.csv
+      - data/processed/y_train.csv
+      - data/processed/preprocessor.joblib
+    outs:
+      - models/model.joblib:
+          cache: false
+    params:
+      - random_seed
+      - model
+      - data.processed_dir
+      - data.model_dir
+
+  evaluate:
+    cmd: python training/evaluate.py
+    deps:
+      - training/evaluate.py
+      - models/model.joblib
+      - data/processed/X_test.csv
+      - data/processed/y_test.csv
+    metrics:
+      - metrics/scores.json:
+          cache: false
+    params:
+      - data.processed_dir
+      - data.model_dir
+      - data.metrics_dir

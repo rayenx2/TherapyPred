@@ -1,0 +1,67 @@
+# Virtual Environment
+venv/
+.venv/
+env/
+bin/
+lib/
+include/
+
+# Python cache and metadata
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Testing and IDEs
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.vscode/
+.idea/
+.DS_Store
+
+# DVC and Data Artifacts
+# These files are managed by DVC and should NOT be tracked by Git
+/data/processed/*
+!/data/processed/.gitkeep
+/models/*
+!/models/.gitkeep
+/metrics/*
+!/metrics/.gitkeep
+.dvc/cache/
+.dvc/tmp/
+
+# DVC ignores itself via its own config, but we ensure the local config is ignored
+.dvc/config.local
+
+# React frontend build artifacts
+frontend/react/node_modules/
+static-react/
+
+# Kubernetes and Secrets
+# Ignore any YAML files that are explicitly named as secrets
+*secret*.yaml
+*secret*.yml
+# Ignore local kubeconfigs
+kubeconfig
+.kube/
+# Ignore any env files besides the example
+.env
+.env.*
+!.env.example

@@ -1,0 +1,35 @@
+FROM python:3.11-slim AS builder
+
+WORKDIR /app
+
+COPY requirements-inference.txt .
+RUN pip install --no-cache-dir --user -r requirements-inference.txt
+
+FROM python:3.11-slim
+
+# Non-root user
+RUN useradd --create-home --shell /bin/bash appuser
+
+WORKDIR /app
+
+# Copy installed packages
+COPY --from=builder /root/.local /home/appuser/.local
+ENV PATH=/home/appuser/.local/bin:$PATH
+
+# Copy inference code and config
+COPY inference/ inference/
+COPY params.yaml .
+COPY models/ models/
+COPY data/processed/ data/processed/
+
+# Set ownership
+RUN chown -R appuser:appuser /app
+
+USER appuser
+
+EXPOSE 8000
+
+HEALTHCHECK --interval=30s --timeout=5s --retries=3 \
+    CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')" || exit 1
+
+CMD ["python", "-m", "uvicorn", "inference.app:app", "--host", "0.0.0.0", "--port", "8000"]

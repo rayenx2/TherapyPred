@@ -1,0 +1,38 @@
+# Stage 1 — Build React app
+FROM node:20-alpine AS frontend-builder
+
+WORKDIR /frontend
+
+COPY frontend/react/package.json frontend/react/package-lock.json* ./
+RUN npm install --legacy-peer-deps
+
+COPY frontend/react/ ./
+RUN npm run build
+
+# Stage 2 — Serve with nginx
+FROM nginx:1.25-alpine
+
+# Non-root preparation
+RUN chown -R nginx:nginx /var/cache/nginx && \
+    chown -R nginx:nginx /var/log/nginx && \
+    touch /var/run/nginx.pid && \
+    chown -R nginx:nginx /var/run/nginx.pid
+
+# Copy static frontend files (vanilla HTML/CSS/JS)
+COPY frontend/ /usr/share/nginx/html/
+
+# Copy React build output (vite outDir is ../../static-react relative to /frontend = /static-react)
+COPY --from=frontend-builder /static-react /usr/share/nginx/html/react
+
+# Custom nginx config for SPA
+# Copy custom Nginx configuration (ARC-01, SEC-02)
+COPY infra/docker/nginx.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 8080
+
+HEALTHCHECK --interval=30s --timeout=5s --retries=3 \
+    CMD wget --spider http://localhost:8080/ || exit 1
+
+USER nginx
+
+CMD ["nginx", "-g", "daemon off;"]

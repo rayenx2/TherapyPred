@@ -1,0 +1,251 @@
+schema: '2.0'
+stages:
+  ingest:
+    cmd: python pipelines/ingest.py
+    deps:
+    - path: data/raw/real_drug_dataset.csv
+      hash: md5
+      md5: dc979022479683b3e8b9b9b9a98e76ab
+      size: 58891
+    - path: pipelines/ingest.py
+      hash: md5
+      md5: 2e785b70145281c54e24c67f9c04e531
+      size: 2779
+    params:
+      params.yaml:
+        data.processed_dir: data/processed
+        data.raw_path: data/raw/real_drug_dataset.csv
+    outs:
+    - path: data/processed/ingested.csv
+      hash: md5
+      md5: dc979022479683b3e8b9b9b9a98e76ab
+      size: 58891
+  validate:
+    cmd: python pipelines/validate.py
+    deps:
+    - path: data/processed/ingested.csv
+      hash: md5
+      md5: dc979022479683b3e8b9b9b9a98e76ab
+      size: 58891
+    - path: pipelines/validate.py
+      hash: md5
+      md5: 219bd44689392abc2b9c799659e74635
+      size: 6181
+    params:
+      params.yaml:
+        data.processed_dir: data/processed
+        schema:
+          columns:
+          - Patient_ID
+          - Age
+          - Gender
+          - Condition
+          - Drug_Name
+          - Dosage_mg
+          - Treatment_Duration_days
+          - Side_Effects
+          - Improvement_Score
+          gender_values:
+          - Female
+          - Male
+          condition_values:
+          - Depression
+          - Diabetes
+          - Hypertension
+          - Infection
+          - Pain Relief
+          drug_values:
+          - Amlodipine
+          - Amoxicillin
+          - Azithromycin
+          - Bupropion
+          - Ciprofloxacin
+          - Escitalopram
+          - Glipizide
+          - Ibuprofen
+          - Insulin Glargine
+          - Losartan
+          - Metformin
+          - Metoprolol
+          - Paracetamol
+          - Sertraline
+          - Tramadol
+          side_effect_values:
+          - Abdominal pain
+          - Allergy
+          - Anxiety
+          - Back pain
+          - Constipation
+          - Cough
+          - Diarrhea
+          - Dizziness
+          - Drowsiness
+          - Dry mouth
+          - Fatigue
+          - Headache
+          - Heartburn
+          - Injection site pain
+          - Insomnia
+          - Joint pain
+          - Liver issues
+          - Low blood sugar
+          - Low sugar
+          - Nausea
+          - Rash
+          - Skin rash
+          - Sleep issues
+          - Slow heartbeat
+          - Stomach pain
+          - Stomach upset
+          - Sweating
+          - Swelling
+          - Tiredness
+          - Weight gain
+          age_range:
+          - 18
+          - 79
+          dosage_values:
+          - 50
+          - 100
+          - 250
+          - 500
+          - 850
+          duration_range:
+          - 5
+          - 59
+          score_range:
+          - 0
+          - 10
+    outs:
+    - path: data/processed/validated.csv
+      hash: md5
+      md5: 1e4acac589cb3127d25221593834b83c
+      size: 58151
+  preprocess:
+    cmd: python pipelines/preprocess.py
+    deps:
+    - path: data/processed/validated.csv
+      hash: md5
+      md5: 1e4acac589cb3127d25221593834b83c
+      size: 58151
+    - path: pipelines/preprocess.py
+      hash: md5
+      md5: 7d9a53ec966362ecd18233bf259362e0
+      size: 5242
+    params:
+      params.yaml:
+        data.processed_dir: data/processed
+        features:
+          target: Improvement_Score
+          id_column: Patient_ID
+          numeric:
+          - Age
+          - Dosage_mg
+          - Treatment_Duration_days
+          categorical:
+          - Gender
+          - Condition
+          - Drug_Name
+          - Side_Effects
+        random_seed: 42
+        test_split: 0.2
+    outs:
+    - path: data/processed/X_test.csv
+      hash: md5
+      md5: 8c8e75eff7ea0ab180738f34c2fa6d40
+      size: 54612
+    - path: data/processed/X_train.csv
+      hash: md5
+      md5: 07d3fed19d49514cb19f09aa54d30b1e
+      size: 214801
+    - path: data/processed/preprocessor.joblib
+      hash: md5
+      md5: 884d45083a28380ba25e55ea7addb7cc
+      size: 5416
+    - path: data/processed/y_test.csv
+      hash: md5
+      md5: 15b3cbd23f5c313b05ab9726ab6b0660
+      size: 824
+    - path: data/processed/y_train.csv
+      hash: md5
+      md5: c3655cc84668a8e515f6a16313261bef
+      size: 3237
+  train:
+    cmd: python training/train.py
+    deps:
+    - path: data/processed/X_train.csv
+      hash: md5
+      md5: 07d3fed19d49514cb19f09aa54d30b1e
+      size: 214801
+    - path: data/processed/preprocessor.joblib
+      hash: md5
+      md5: 884d45083a28380ba25e55ea7addb7cc
+      size: 5416
+    - path: data/processed/y_train.csv
+      hash: md5
+      md5: c3655cc84668a8e515f6a16313261bef
+      size: 3237
+    - path: training/train.py
+      hash: md5
+      md5: 1f3fff62c6d2883335811d23a95c4a16
+      size: 3664
+    params:
+      params.yaml:
+        data.model_dir: models
+        data.processed_dir: data/processed
+        model:
+          n_estimators: 200
+          max_depth: 15
+          min_samples_split: 5
+          min_samples_leaf: 2
+        random_seed: 42
+    outs:
+    - path: models/model.joblib
+      hash: md5
+      md5: 66b84d212ee0a50235197bc66bec4ceb
+      size: 4214065
+  evaluate:
+    cmd: python training/evaluate.py
+    deps:
+    - path: data/processed/X_test.csv
+      hash: md5
+      md5: 8c8e75eff7ea0ab180738f34c2fa6d40
+      size: 54612
+    - path: data/processed/y_test.csv
+      hash: md5
+      md5: 15b3cbd23f5c313b05ab9726ab6b0660
+      size: 824
+    - path: models/model.joblib
+      hash: md5
+      md5: 66b84d212ee0a50235197bc66bec4ceb
+      size: 4214065
+    - path: training/evaluate.py
+      hash: md5
+      md5: aa2657e821143a7d3313e0730e9f80cd
+      size: 3006
+    params:
+      params.yaml:
+        data.metrics_dir: metrics
+        data.model_dir: models
+        data.processed_dir: data/processed
+    outs:
+    - path: metrics/scores.json
+      hash: md5
+      md5: 3819df8be13d6205859195d9126ed3cf
+      size: 76
+  extract_combinations:
+    cmd: python pipelines/extract_combinations.py
+    deps:
+    - path: data/raw/real_drug_dataset.csv
+      hash: md5
+      md5: dc979022479683b3e8b9b9b9a98e76ab
+      size: 58891
+    - path: pipelines/extract_combinations.py
+      hash: md5
+      md5: 9b4439a01b47b834ef89454fcf4f3db7
+      size: 1076
+    outs:
+    - path: data/processed/valid_combinations.json
+      hash: md5
+      md5: ddf7fdb15b78eeaf179b01d5c5cb2a2e
+      size: 27795

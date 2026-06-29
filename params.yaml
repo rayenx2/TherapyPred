@@ -1,0 +1,106 @@
+# Central pipeline parameters
+# All stages reference this file for reproducibility
+
+random_seed: 42
+test_split: 0.2
+
+# Model parameters
+model:
+  n_estimators: 200
+  max_depth: 15
+  min_samples_split: 5
+  min_samples_leaf: 2
+
+# Data paths
+data:
+  raw_path: data/raw/real_drug_dataset.csv
+  processed_dir: data/processed
+  model_dir: models
+  metrics_dir: metrics
+
+# Feature columns
+features:
+  target: Improvement_Score
+  id_column: Patient_ID
+  numeric:
+    - Age
+    - Dosage_mg
+    - Treatment_Duration_days
+  categorical:
+    - Gender
+    - Condition
+    - Drug_Name
+    - Side_Effects
+
+# Schema validation
+schema:
+  columns:
+    - Patient_ID
+    - Age
+    - Gender
+    - Condition
+    - Drug_Name
+    - Dosage_mg
+    - Treatment_Duration_days
+    - Side_Effects
+    - Improvement_Score
+  gender_values:
+    - Female
+    - Male
+  condition_values:
+    - Depression
+    - Diabetes
+    - Hypertension
+    - Infection
+    - Pain Relief
+  drug_values:
+    - Amlodipine
+    - Amoxicillin
+    - Azithromycin
+    - Bupropion
+    - Ciprofloxacin
+    - Escitalopram
+    - Glipizide
+    - Ibuprofen
+    - Insulin Glargine
+    - Losartan
+    - Metformin
+    - Metoprolol
+    - Paracetamol
+    - Sertraline
+    - Tramadol
+  side_effect_values:
+    - Abdominal pain
+    - Allergy
+    - Anxiety
+    - Back pain
+    - Constipation
+    - Cough
+    - Diarrhea
+    - Dizziness
+    - Drowsiness
+    - Dry mouth
+    - Fatigue
+    - Headache
+    - Heartburn
+    - Injection site pain
+    - Insomnia
+    - Joint pain
+    - Liver issues
+    - Low blood sugar
+    - Low sugar
+    - Nausea
+    - Rash
+    - Skin rash
+    - Sleep issues
+    - Slow heartbeat
+    - Stomach pain
+    - Stomach upset
+    - Sweating
+    - Swelling
+    - Tiredness
+    - Weight gain
+  age_range: [18, 79]
+  dosage_values: [50, 100, 250, 500, 850]
+  duration_range: [5, 59]
+  score_range: [0, 10]

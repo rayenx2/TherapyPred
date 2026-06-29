@@ -1,0 +1,1334 @@
+[
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Ciprofloxacin",
+    "Dosage_mg": 50,
+    "Side_Effects": "Nausea"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Metoprolol",
+    "Dosage_mg": 500,
+    "Side_Effects": "Tiredness"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Bupropion",
+    "Dosage_mg": 100,
+    "Side_Effects": "Dry mouth"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Glipizide",
+    "Dosage_mg": 850,
+    "Side_Effects": "Low blood sugar"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Bupropion",
+    "Dosage_mg": 850,
+    "Side_Effects": "Anxiety"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Ciprofloxacin",
+    "Dosage_mg": 850,
+    "Side_Effects": "Dizziness"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Glipizide",
+    "Dosage_mg": 250,
+    "Side_Effects": "Nausea"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Paracetamol",
+    "Dosage_mg": 100,
+    "Side_Effects": "Liver issues"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Escitalopram",
+    "Dosage_mg": 850,
+    "Side_Effects": "Nausea"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Metformin",
+    "Dosage_mg": 850,
+    "Side_Effects": "Nausea"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Bupropion",
+    "Dosage_mg": 50,
+    "Side_Effects": "Headache"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Glipizide",
+    "Dosage_mg": 500,
+    "Side_Effects": "Nausea"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Amlodipine",
+    "Dosage_mg": 50,
+    "Side_Effects": "Dizziness"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Bupropion",
+    "Dosage_mg": 250,
+    "Side_Effects": "Dry mouth"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Ibuprofen",
+    "Dosage_mg": 850,
+    "Side_Effects": "Nausea"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Tramadol",
+    "Dosage_mg": 50,
+    "Side_Effects": "Dizziness"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Azithromycin",
+    "Dosage_mg": 50,
+    "Side_Effects": "Abdominal pain"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Glipizide",
+    "Dosage_mg": 100,
+    "Side_Effects": "Low blood sugar"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Sertraline",
+    "Dosage_mg": 500,
+    "Side_Effects": "Dry mouth"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Azithromycin",
+    "Dosage_mg": 50,
+    "Side_Effects": "Nausea"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Bupropion",
+    "Dosage_mg": 100,
+    "Side_Effects": "Anxiety"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Insulin Glargine",
+    "Dosage_mg": 500,
+    "Side_Effects": "Low sugar"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Paracetamol",
+    "Dosage_mg": 850,
+    "Side_Effects": "Liver issues"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Losartan",
+    "Dosage_mg": 100,
+    "Side_Effects": "Back pain"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Tramadol",
+    "Dosage_mg": 850,
+    "Side_Effects": "Nausea"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Ciprofloxacin",
+    "Dosage_mg": 500,
+    "Side_Effects": "Dizziness"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Ciprofloxacin",
+    "Dosage_mg": 100,
+    "Side_Effects": "Nausea"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Glipizide",
+    "Dosage_mg": 50,
+    "Side_Effects": "Skin rash"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Metoprolol",
+    "Dosage_mg": 100,
+    "Side_Effects": "Tiredness"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Ciprofloxacin",
+    "Dosage_mg": 100,
+    "Side_Effects": "Dizziness"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Insulin Glargine",
+    "Dosage_mg": 850,
+    "Side_Effects": "Weight gain"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Paracetamol",
+    "Dosage_mg": 500,
+    "Side_Effects": "Liver issues"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Sertraline",
+    "Dosage_mg": 250,
+    "Side_Effects": "Insomnia"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Glipizide",
+    "Dosage_mg": 500,
+    "Side_Effects": "Low blood sugar"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Glipizide",
+    "Dosage_mg": 50,
+    "Side_Effects": "Low blood sugar"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Bupropion",
+    "Dosage_mg": 100,
+    "Side_Effects": "Headache"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Ciprofloxacin",
+    "Dosage_mg": 500,
+    "Side_Effects": "Nausea"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Amoxicillin",
+    "Dosage_mg": 250,
+    "Side_Effects": "Diarrhea"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Escitalopram",
+    "Dosage_mg": 500,
+    "Side_Effects": "Sweating"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Sertraline",
+    "Dosage_mg": 850,
+    "Side_Effects": "Insomnia"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Tramadol",
+    "Dosage_mg": 250,
+    "Side_Effects": "Constipation"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Amoxicillin",
+    "Dosage_mg": 850,
+    "Side_Effects": "Allergy"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Amlodipine",
+    "Dosage_mg": 50,
+    "Side_Effects": "Fatigue"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Amoxicillin",
+    "Dosage_mg": 500,
+    "Side_Effects": "Rash"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Azithromycin",
+    "Dosage_mg": 500,
+    "Side_Effects": "Headache"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Tramadol",
+    "Dosage_mg": 850,
+    "Side_Effects": "Constipation"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Amlodipine",
+    "Dosage_mg": 100,
+    "Side_Effects": "Swelling"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Metoprolol",
+    "Dosage_mg": 850,
+    "Side_Effects": "Dizziness"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Ibuprofen",
+    "Dosage_mg": 50,
+    "Side_Effects": "Nausea"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Azithromycin",
+    "Dosage_mg": 250,
+    "Side_Effects": "Abdominal pain"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Metoprolol",
+    "Dosage_mg": 100,
+    "Side_Effects": "Dizziness"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Losartan",
+    "Dosage_mg": 100,
+    "Side_Effects": "Cough"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Bupropion",
+    "Dosage_mg": 850,
+    "Side_Effects": "Dry mouth"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Ciprofloxacin",
+    "Dosage_mg": 250,
+    "Side_Effects": "Nausea"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Insulin Glargine",
+    "Dosage_mg": 500,
+    "Side_Effects": "Weight gain"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Tramadol",
+    "Dosage_mg": 500,
+    "Side_Effects": "Dizziness"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Glipizide",
+    "Dosage_mg": 250,
+    "Side_Effects": "Low blood sugar"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Amlodipine",
+    "Dosage_mg": 500,
+    "Side_Effects": "Dizziness"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Amlodipine",
+    "Dosage_mg": 850,
+    "Side_Effects": "Fatigue"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Ciprofloxacin",
+    "Dosage_mg": 100,
+    "Side_Effects": "Joint pain"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Metoprolol",
+    "Dosage_mg": 850,
+    "Side_Effects": "Tiredness"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Amlodipine",
+    "Dosage_mg": 50,
+    "Side_Effects": "Swelling"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Amlodipine",
+    "Dosage_mg": 100,
+    "Side_Effects": "Fatigue"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Paracetamol",
+    "Dosage_mg": 250,
+    "Side_Effects": "Fatigue"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Escitalopram",
+    "Dosage_mg": 250,
+    "Side_Effects": "Sweating"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Metformin",
+    "Dosage_mg": 500,
+    "Side_Effects": "Nausea"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Ciprofloxacin",
+    "Dosage_mg": 850,
+    "Side_Effects": "Joint pain"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Ciprofloxacin",
+    "Dosage_mg": 50,
+    "Side_Effects": "Joint pain"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Amoxicillin",
+    "Dosage_mg": 100,
+    "Side_Effects": "Diarrhea"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Bupropion",
+    "Dosage_mg": 850,
+    "Side_Effects": "Headache"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Paracetamol",
+    "Dosage_mg": 50,
+    "Side_Effects": "Rash"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Bupropion",
+    "Dosage_mg": 50,
+    "Side_Effects": "Anxiety"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Azithromycin",
+    "Dosage_mg": 850,
+    "Side_Effects": "Nausea"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Metformin",
+    "Dosage_mg": 500,
+    "Side_Effects": "Stomach upset"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Losartan",
+    "Dosage_mg": 850,
+    "Side_Effects": "Back pain"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Tramadol",
+    "Dosage_mg": 500,
+    "Side_Effects": "Constipation"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Tramadol",
+    "Dosage_mg": 100,
+    "Side_Effects": "Nausea"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Sertraline",
+    "Dosage_mg": 850,
+    "Side_Effects": "Dry mouth"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Sertraline",
+    "Dosage_mg": 100,
+    "Side_Effects": "Drowsiness"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Insulin Glargine",
+    "Dosage_mg": 100,
+    "Side_Effects": "Injection site pain"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Metformin",
+    "Dosage_mg": 250,
+    "Side_Effects": "Diarrhea"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Amlodipine",
+    "Dosage_mg": 250,
+    "Side_Effects": "Fatigue"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Losartan",
+    "Dosage_mg": 250,
+    "Side_Effects": "Headache"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Glipizide",
+    "Dosage_mg": 500,
+    "Side_Effects": "Skin rash"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Amoxicillin",
+    "Dosage_mg": 250,
+    "Side_Effects": "Allergy"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Amoxicillin",
+    "Dosage_mg": 850,
+    "Side_Effects": "Diarrhea"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Amlodipine",
+    "Dosage_mg": 500,
+    "Side_Effects": "Fatigue"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Losartan",
+    "Dosage_mg": 50,
+    "Side_Effects": "Cough"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Tramadol",
+    "Dosage_mg": 250,
+    "Side_Effects": "Nausea"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Insulin Glargine",
+    "Dosage_mg": 100,
+    "Side_Effects": "Low sugar"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Amoxicillin",
+    "Dosage_mg": 850,
+    "Side_Effects": "Rash"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Insulin Glargine",
+    "Dosage_mg": 500,
+    "Side_Effects": "Injection site pain"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Glipizide",
+    "Dosage_mg": 850,
+    "Side_Effects": "Skin rash"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Metformin",
+    "Dosage_mg": 250,
+    "Side_Effects": "Stomach upset"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Escitalopram",
+    "Dosage_mg": 850,
+    "Side_Effects": "Sleep issues"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Escitalopram",
+    "Dosage_mg": 100,
+    "Side_Effects": "Sleep issues"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Azithromycin",
+    "Dosage_mg": 50,
+    "Side_Effects": "Headache"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Tramadol",
+    "Dosage_mg": 50,
+    "Side_Effects": "Nausea"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Insulin Glargine",
+    "Dosage_mg": 250,
+    "Side_Effects": "Low sugar"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Sertraline",
+    "Dosage_mg": 50,
+    "Side_Effects": "Drowsiness"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Losartan",
+    "Dosage_mg": 500,
+    "Side_Effects": "Cough"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Escitalopram",
+    "Dosage_mg": 500,
+    "Side_Effects": "Sleep issues"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Metoprolol",
+    "Dosage_mg": 500,
+    "Side_Effects": "Dizziness"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Sertraline",
+    "Dosage_mg": 50,
+    "Side_Effects": "Insomnia"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Metoprolol",
+    "Dosage_mg": 250,
+    "Side_Effects": "Dizziness"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Glipizide",
+    "Dosage_mg": 850,
+    "Side_Effects": "Nausea"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Tramadol",
+    "Dosage_mg": 500,
+    "Side_Effects": "Nausea"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Insulin Glargine",
+    "Dosage_mg": 50,
+    "Side_Effects": "Weight gain"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Azithromycin",
+    "Dosage_mg": 100,
+    "Side_Effects": "Nausea"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Sertraline",
+    "Dosage_mg": 100,
+    "Side_Effects": "Insomnia"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Escitalopram",
+    "Dosage_mg": 100,
+    "Side_Effects": "Sweating"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Paracetamol",
+    "Dosage_mg": 500,
+    "Side_Effects": "Fatigue"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Ciprofloxacin",
+    "Dosage_mg": 250,
+    "Side_Effects": "Joint pain"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Azithromycin",
+    "Dosage_mg": 500,
+    "Side_Effects": "Nausea"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Amlodipine",
+    "Dosage_mg": 250,
+    "Side_Effects": "Swelling"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Amoxicillin",
+    "Dosage_mg": 50,
+    "Side_Effects": "Rash"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Insulin Glargine",
+    "Dosage_mg": 100,
+    "Side_Effects": "Weight gain"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Bupropion",
+    "Dosage_mg": 250,
+    "Side_Effects": "Headache"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Sertraline",
+    "Dosage_mg": 250,
+    "Side_Effects": "Dry mouth"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Azithromycin",
+    "Dosage_mg": 250,
+    "Side_Effects": "Headache"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Ibuprofen",
+    "Dosage_mg": 500,
+    "Side_Effects": "Stomach pain"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Sertraline",
+    "Dosage_mg": 250,
+    "Side_Effects": "Drowsiness"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Losartan",
+    "Dosage_mg": 250,
+    "Side_Effects": "Cough"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Ciprofloxacin",
+    "Dosage_mg": 500,
+    "Side_Effects": "Joint pain"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Paracetamol",
+    "Dosage_mg": 50,
+    "Side_Effects": "Liver issues"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Ibuprofen",
+    "Dosage_mg": 100,
+    "Side_Effects": "Stomach pain"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Amoxicillin",
+    "Dosage_mg": 100,
+    "Side_Effects": "Allergy"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Azithromycin",
+    "Dosage_mg": 500,
+    "Side_Effects": "Abdominal pain"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Metformin",
+    "Dosage_mg": 250,
+    "Side_Effects": "Nausea"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Metoprolol",
+    "Dosage_mg": 50,
+    "Side_Effects": "Dizziness"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Insulin Glargine",
+    "Dosage_mg": 250,
+    "Side_Effects": "Weight gain"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Insulin Glargine",
+    "Dosage_mg": 50,
+    "Side_Effects": "Injection site pain"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Glipizide",
+    "Dosage_mg": 250,
+    "Side_Effects": "Skin rash"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Escitalopram",
+    "Dosage_mg": 250,
+    "Side_Effects": "Nausea"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Losartan",
+    "Dosage_mg": 500,
+    "Side_Effects": "Headache"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Insulin Glargine",
+    "Dosage_mg": 850,
+    "Side_Effects": "Injection site pain"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Ibuprofen",
+    "Dosage_mg": 250,
+    "Side_Effects": "Stomach pain"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Amoxicillin",
+    "Dosage_mg": 500,
+    "Side_Effects": "Allergy"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Escitalopram",
+    "Dosage_mg": 850,
+    "Side_Effects": "Sweating"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Bupropion",
+    "Dosage_mg": 500,
+    "Side_Effects": "Anxiety"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Tramadol",
+    "Dosage_mg": 50,
+    "Side_Effects": "Constipation"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Amoxicillin",
+    "Dosage_mg": 50,
+    "Side_Effects": "Diarrhea"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Ibuprofen",
+    "Dosage_mg": 100,
+    "Side_Effects": "Nausea"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Metformin",
+    "Dosage_mg": 50,
+    "Side_Effects": "Nausea"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Escitalopram",
+    "Dosage_mg": 500,
+    "Side_Effects": "Nausea"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Losartan",
+    "Dosage_mg": 850,
+    "Side_Effects": "Cough"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Escitalopram",
+    "Dosage_mg": 100,
+    "Side_Effects": "Nausea"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Bupropion",
+    "Dosage_mg": 250,
+    "Side_Effects": "Anxiety"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Escitalopram",
+    "Dosage_mg": 250,
+    "Side_Effects": "Sleep issues"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Ibuprofen",
+    "Dosage_mg": 50,
+    "Side_Effects": "Stomach pain"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Metformin",
+    "Dosage_mg": 100,
+    "Side_Effects": "Diarrhea"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Insulin Glargine",
+    "Dosage_mg": 850,
+    "Side_Effects": "Low sugar"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Insulin Glargine",
+    "Dosage_mg": 250,
+    "Side_Effects": "Injection site pain"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Metoprolol",
+    "Dosage_mg": 500,
+    "Side_Effects": "Slow heartbeat"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Sertraline",
+    "Dosage_mg": 50,
+    "Side_Effects": "Dry mouth"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Escitalopram",
+    "Dosage_mg": 50,
+    "Side_Effects": "Sleep issues"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Bupropion",
+    "Dosage_mg": 500,
+    "Side_Effects": "Dry mouth"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Amlodipine",
+    "Dosage_mg": 100,
+    "Side_Effects": "Dizziness"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Ibuprofen",
+    "Dosage_mg": 500,
+    "Side_Effects": "Nausea"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Azithromycin",
+    "Dosage_mg": 850,
+    "Side_Effects": "Headache"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Escitalopram",
+    "Dosage_mg": 50,
+    "Side_Effects": "Nausea"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Losartan",
+    "Dosage_mg": 500,
+    "Side_Effects": "Back pain"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Paracetamol",
+    "Dosage_mg": 500,
+    "Side_Effects": "Rash"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Azithromycin",
+    "Dosage_mg": 100,
+    "Side_Effects": "Headache"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Metformin",
+    "Dosage_mg": 50,
+    "Side_Effects": "Stomach upset"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Ibuprofen",
+    "Dosage_mg": 50,
+    "Side_Effects": "Heartburn"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Escitalopram",
+    "Dosage_mg": 50,
+    "Side_Effects": "Sweating"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Losartan",
+    "Dosage_mg": 250,
+    "Side_Effects": "Back pain"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Losartan",
+    "Dosage_mg": 850,
+    "Side_Effects": "Headache"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Bupropion",
+    "Dosage_mg": 500,
+    "Side_Effects": "Headache"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Metformin",
+    "Dosage_mg": 100,
+    "Side_Effects": "Stomach upset"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Paracetamol",
+    "Dosage_mg": 50,
+    "Side_Effects": "Fatigue"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Tramadol",
+    "Dosage_mg": 850,
+    "Side_Effects": "Dizziness"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Amlodipine",
+    "Dosage_mg": 850,
+    "Side_Effects": "Dizziness"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Losartan",
+    "Dosage_mg": 50,
+    "Side_Effects": "Back pain"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Amoxicillin",
+    "Dosage_mg": 500,
+    "Side_Effects": "Diarrhea"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Metoprolol",
+    "Dosage_mg": 250,
+    "Side_Effects": "Slow heartbeat"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Amlodipine",
+    "Dosage_mg": 250,
+    "Side_Effects": "Dizziness"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Paracetamol",
+    "Dosage_mg": 250,
+    "Side_Effects": "Rash"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Losartan",
+    "Dosage_mg": 100,
+    "Side_Effects": "Headache"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Amoxicillin",
+    "Dosage_mg": 100,
+    "Side_Effects": "Rash"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Paracetamol",
+    "Dosage_mg": 100,
+    "Side_Effects": "Rash"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Metformin",
+    "Dosage_mg": 50,
+    "Side_Effects": "Diarrhea"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Sertraline",
+    "Dosage_mg": 500,
+    "Side_Effects": "Drowsiness"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Metoprolol",
+    "Dosage_mg": 250,
+    "Side_Effects": "Tiredness"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Ibuprofen",
+    "Dosage_mg": 100,
+    "Side_Effects": "Heartburn"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Azithromycin",
+    "Dosage_mg": 100,
+    "Side_Effects": "Abdominal pain"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Sertraline",
+    "Dosage_mg": 850,
+    "Side_Effects": "Drowsiness"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Ibuprofen",
+    "Dosage_mg": 850,
+    "Side_Effects": "Heartburn"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Tramadol",
+    "Dosage_mg": 100,
+    "Side_Effects": "Constipation"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Paracetamol",
+    "Dosage_mg": 100,
+    "Side_Effects": "Fatigue"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Metoprolol",
+    "Dosage_mg": 50,
+    "Side_Effects": "Tiredness"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Metformin",
+    "Dosage_mg": 850,
+    "Side_Effects": "Diarrhea"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Ciprofloxacin",
+    "Dosage_mg": 250,
+    "Side_Effects": "Dizziness"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Glipizide",
+    "Dosage_mg": 100,
+    "Side_Effects": "Skin rash"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Amoxicillin",
+    "Dosage_mg": 50,
+    "Side_Effects": "Allergy"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Amoxicillin",
+    "Dosage_mg": 250,
+    "Side_Effects": "Rash"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Losartan",
+    "Dosage_mg": 50,
+    "Side_Effects": "Headache"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Amlodipine",
+    "Dosage_mg": 500,
+    "Side_Effects": "Swelling"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Glipizide",
+    "Dosage_mg": 100,
+    "Side_Effects": "Nausea"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Ibuprofen",
+    "Dosage_mg": 250,
+    "Side_Effects": "Nausea"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Tramadol",
+    "Dosage_mg": 250,
+    "Side_Effects": "Dizziness"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Insulin Glargine",
+    "Dosage_mg": 50,
+    "Side_Effects": "Low sugar"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Paracetamol",
+    "Dosage_mg": 850,
+    "Side_Effects": "Rash"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Bupropion",
+    "Dosage_mg": 50,
+    "Side_Effects": "Dry mouth"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Ibuprofen",
+    "Dosage_mg": 500,
+    "Side_Effects": "Heartburn"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Paracetamol",
+    "Dosage_mg": 850,
+    "Side_Effects": "Fatigue"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Metformin",
+    "Dosage_mg": 850,
+    "Side_Effects": "Stomach upset"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Ciprofloxacin",
+    "Dosage_mg": 850,
+    "Side_Effects": "Nausea"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Azithromycin",
+    "Dosage_mg": 250,
+    "Side_Effects": "Nausea"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Paracetamol",
+    "Dosage_mg": 250,
+    "Side_Effects": "Liver issues"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Metoprolol",
+    "Dosage_mg": 50,
+    "Side_Effects": "Slow heartbeat"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Metformin",
+    "Dosage_mg": 100,
+    "Side_Effects": "Nausea"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Ibuprofen",
+    "Dosage_mg": 850,
+    "Side_Effects": "Stomach pain"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Metoprolol",
+    "Dosage_mg": 850,
+    "Side_Effects": "Slow heartbeat"
+  },
+  {
+    "Condition": "Diabetes",
+    "Drug_Name": "Metformin",
+    "Dosage_mg": 500,
+    "Side_Effects": "Diarrhea"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Metoprolol",
+    "Dosage_mg": 100,
+    "Side_Effects": "Slow heartbeat"
+  },
+  {
+    "Condition": "Depression",
+    "Drug_Name": "Sertraline",
+    "Dosage_mg": 500,
+    "Side_Effects": "Insomnia"
+  },
+  {
+    "Condition": "Hypertension",
+    "Drug_Name": "Amlodipine",
+    "Dosage_mg": 850,
+    "Side_Effects": "Swelling"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Ciprofloxacin",
+    "Dosage_mg": 50,
+    "Side_Effects": "Dizziness"
+  },
+  {
+    "Condition": "Pain Relief",
+    "Drug_Name": "Ibuprofen",
+    "Dosage_mg": 250,
+    "Side_Effects": "Heartburn"
+  },
+  {
+    "Condition": "Infection",
+    "Drug_Name": "Azithromycin",
+    "Dosage_mg": 850,
+    "Side_Effects": "Abdominal pain"
+  }
+]
